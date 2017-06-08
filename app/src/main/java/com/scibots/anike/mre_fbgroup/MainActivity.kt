@@ -3,7 +3,11 @@ package com.scibots.anike.mre_fbgroup;
 import android.os.Build
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View
 import android.view.WindowManager
+import com.afollestad.materialdialogs.MaterialDialog
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +21,13 @@ class MainActivity : AppCompatActivity() {
             w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
         }
 
+    }
 
-
+    fun share(view: View){
+        val dialog = MaterialDialog.Builder(this)
+                .title(R.string.title)
+                .content(R.string.content)
+                .positiveText(R.string.postive)
+                .show()
     }
 }
