@@ -24,9 +24,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun share(view: View){
+        val wrapInScrollView = true
         val dialog = MaterialDialog.Builder(this)
                 .title(R.string.title)
-                .content(R.string.content)
+                .customView(R.layout.share_details, wrapInScrollView)
                 .positiveText(R.string.postive)
                 .show()
     }
